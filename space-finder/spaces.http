@@ -1,4 +1,12 @@
 
 
-GET https://m5466wvrie.execute-api.eu-west-1.amazonaws.com/prod/spaces
+GET https://hxjsbd5dk8.execute-api.eu-west-1.amazonaws.com/prod/spaces
+###
+
+POST https://hxjsbd5dk8.execute-api.eu-west-1.amazonaws.com/prod/spaces
+Content-Type: application/json
+
+{
+    "location": "Paris"
+}
 ###
