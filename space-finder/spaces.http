@@ -7,20 +7,21 @@ POST https://hxjsbd5dk8.execute-api.eu-west-1.amazonaws.com/prod/spaces
 Content-Type: application/json
 
 {
-    "location": "Paris"
+    "location": "Barcelona",
+    "name": "Best place!"
 }
 ###
 
-GET https://hxjsbd5dk8.execute-api.eu-west-1.amazonaws.com/prod/spaces?id?id=12345
+GET https://hxjsbd5dk8.execute-api.eu-west-1.amazonaws.com/prod/spaces?id=c3f63937-c391-4584-a888-95953856bf79
 ###
 
 DELETE https://hxjsbd5dk8.execute-api.eu-west-1.amazonaws.com/prod/spaces?id?id=12345
 ###
 
-PUT https://hxjsbd5dk8.execute-api.eu-west-1.amazonaws.com/prod/spaces?id=12345
+PUT https://hxjsbd5dk8.execute-api.eu-west-1.amazonaws.com/prod/spaces?id=c3f63937-c391-4584-a888-95953856bf79
 Content-Type: application/json
 
 {
-    "location": "Paris2"
+    "name": "Best Place to live and eat!"
 }
 ###

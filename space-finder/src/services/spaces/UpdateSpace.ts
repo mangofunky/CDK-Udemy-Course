@@ -15,17 +15,18 @@ export async function updateSpace(event: APIGatewayProxyEvent, ddbClient: Dynamo
             Key: {
                 'id': {S: spaceId}
             },
-            UpdateExpression: 'set #zzNew = :new',
+            UpdateExpression: 'set #zzzNew = :new',
             ExpressionAttributeValues: {
-                ':new':{
+                ':new': {
                     S: requestBodyValue
                 }
             },
             ExpressionAttributeNames: {
-                '#zzNew': requestBodyKey
+                '#zzzNew': requestBodyKey
             },
-            ReturnValues: "UPDATED_NEW"
+            ReturnValues: 'UPDATED_NEW'
         }));
+        console.log(updateResult)
         return {
             statusCode: 204,
             body: JSON.stringify(updateResult.Attributes)
@@ -33,6 +34,6 @@ export async function updateSpace(event: APIGatewayProxyEvent, ddbClient: Dynamo
     }
     return {
         statusCode: 400,
-        body: JSON.stringify('Please provide right args!')
+        body: JSON.stringify('Please provide right args!!')
     }
 }

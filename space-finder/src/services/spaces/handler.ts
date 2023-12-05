@@ -20,7 +20,6 @@ async function handler(event: APIGatewayProxyEvent, context: Context): Promise<A
                 return getResponse;
             case 'POST':
                 const postResponse = await postSpaces(event, ddbClient);
-                console.log(postResponse)
                 return postResponse;
             case 'PUT':
                 const putResponse = await updateSpace(event, ddbClient);
@@ -32,17 +31,17 @@ async function handler(event: APIGatewayProxyEvent, context: Context): Promise<A
                 return deleteResponse;
             default:
                 break;
-        }      
+        }
     } catch (error) {
         if (error instanceof MissingFieldError) {
             return {
                 statusCode: 400,
-                body: JSON.stringify(error.message)
+                body: error.message
             }
         }
         return {
             statusCode: 500,
-            body: JSON.stringify(error.message)
+            body: error.message
         }
     }
     const response: APIGatewayProxyResult = {

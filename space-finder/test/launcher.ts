@@ -4,12 +4,12 @@ process.env.AWS_REGION = "eu-west-1"
 process.env.TABLE_NAME = "SpaceTable-0eb3c459d0fb"
 
 handler({
-    httpMethod: 'POST',
-    // queryStringParameters: {
-    //     id: '1b8e9211-a5d0-42b8-8ef8-7b39eca0fdf1'
-    // },
+    httpMethod: 'PUT',
+    queryStringParameters: {
+        id: 'c3f63937-c391-4584-a888-95953856bf79'
+    },
     body: JSON.stringify({
-        location: 'Barcelona2'
+        name: 'Best nightclubs'
     })
 } as any, {} as any).then(result =>{
     console.log(result)

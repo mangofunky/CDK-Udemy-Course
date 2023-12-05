@@ -21,7 +21,7 @@ export async function getSpaces(event: APIGatewayProxyEvent, ddbClient: DynamoDB
                 }
             } else {
                 return {
-                    statusCode: 400,
+                    statusCode: 200,
                     body: JSON.stringify(`Space with id ${spaceId} not found!`)
                 }
             }
