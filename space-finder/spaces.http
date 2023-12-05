@@ -11,5 +11,13 @@ Content-Type: application/json
 }
 ###
 
-GET https://hxjsbd5dk8.execute-api.eu-west-1.amazonaws.com/prod/spaces?id
+GET https://hxjsbd5dk8.execute-api.eu-west-1.amazonaws.com/prod/spaces?id?id=12345
+###
+
+PUT https://hxjsbd5dk8.execute-api.eu-west-1.amazonaws.com/prod/spaces?id=12345
+Content-Type: application/json
+
+{
+    "location": "Paris2"
+}
 ###
