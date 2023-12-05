@@ -1,6 +1,7 @@
 import { DynamoDBClient } from "@aws-sdk/client-dynamodb";
 import { APIGatewayProxyEvent, APIGatewayProxyResult, Context } from "aws-lambda";
 import { postSpaces } from "./PostSpaces";
+import { getSpaces } from "./GetSpaces";
 
 const ddbClient = new DynamoDBClient({});
 
